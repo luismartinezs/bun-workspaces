@@ -1,5 +1,6 @@
 // src/modules/tracker/tracker.public.ts (PUBLIC API)
 import { TrackerContract } from './tracker.contract';
+export type { TrackerContract };
 export { createRecordSightingCommand } from './record-sighting.command';
 
 export const trackerApi = {

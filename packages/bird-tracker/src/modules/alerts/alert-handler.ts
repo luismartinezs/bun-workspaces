@@ -1,5 +1,5 @@
 // src/modules/alerts/alert-handler.ts (CONSUMING THE CONTRACT)
-import { TrackerContract } from '../tracker/tracker.contract';
+import { TrackerContract } from '../tracker';
 import { NotificationStrategy } from './notify.strategy';
 
 export const setupAlerts = (tracker: TrackerContract, strategy: NotificationStrategy) => {

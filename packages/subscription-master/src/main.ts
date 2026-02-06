@@ -1,8 +1,6 @@
 import { log } from "./shared/logger";
-import { billingService, createUpgradeCommand } from "./modules/billing";
-import { stripePayment } from "./modules/billing/upgrade/strategies/stripe.strategy";
-import { paypalPayment } from "./modules/billing/upgrade/strategies/paypal.strategy";
-import { setupNotificationListener } from "./modules/notifications/notify-user";
+import { billingService, createUpgradeCommand, stripePayment, paypalPayment } from "./modules/billing";
+import { setupNotificationListener } from "./modules/notifications";
 import { createCommandRunner } from "./shared/command-runner";
 
 async function main() {

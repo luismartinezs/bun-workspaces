@@ -3,7 +3,7 @@ type AppEvents = {
   BIRD_SPOTTED: { species: string; location: string; rarity: 'common' | 'rare' };
 };
 
-const listeners: Record<string, ((data: any) => void)[]> = {};
+const listeners: Record<string, ((data: AppEvents[keyof AppEvents]) => void)[]> = {};
 
 export const eventBus = {
   on: <K extends keyof AppEvents>(event: K, cb: (data: AppEvents[K]) => void) => {
