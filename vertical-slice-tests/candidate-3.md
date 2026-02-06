@@ -1,0 +1,1 @@
+Create an implementation plan in feature-plan-3.md for the attached spec. You MUST strictly use the following patterns: Command Pattern for the referral execution, Strategy Pattern for the different reward tiers (Standard vs. Subscription), and Observer Pattern for the purchase trigger. Ensure the plan follows the 'Functional TypeScript' rules: no classes, use closures and types

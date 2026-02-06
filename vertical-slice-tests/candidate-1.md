@@ -1,0 +1,1 @@
+Act as a Senior Software Architect. Read feature-spec.md and create a feature-plan-1.md using Vertical Slice Architecture. Focus specifically on the Service Contract and Public API first. The plan must define how this slice will expose its data to other slices and what events it will emit to the event-bus. Structure the plan to ensure zero horizontal coupling with other modules

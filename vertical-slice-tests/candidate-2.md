@@ -1,0 +1,1 @@
+Act as a Lead Developer. I want an implementation plan for feature-spec.md following Vertical Slice Architecture. Before writing the plan, you must ask me at least 5 clarifying questions to identify 'Knowledge Gaps' regarding boundaries, data persistence, and edge cases. Once I answer, generate a detailed feature-plan-2.md that uses the Command Pattern for the referral logic

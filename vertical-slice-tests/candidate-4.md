@@ -1,0 +1,1 @@
+Create an implementation plan for feature-spec.md in feature-plan-4.md. Start by defining how this feature will be 'wired up' in the Composition Root (main.ts). Then, work backward to define the public.ts and the internal slice structure. The plan should assume that this slice can be deleted entirely by removing its entry in main.ts without breaking the rest of the app
