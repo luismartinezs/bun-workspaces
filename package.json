@@ -4,10 +4,23 @@
   "module": "index.ts",
   "type": "module",
   "workspaces": [
-    "packages/a",
-    "packages/b"
+    "packages/bird-tracker",
+    "packages/subscription-master"
   ],
   "scripts": {
-    "clean": "rm -rf node_modules packages/a/node_modules packages/b/node_modules bun.lockb packages/a/bun.lockb packages/b/bun.lockb"
+    "clean": "rm -rf node_modules packages/bird-tracker/node_modules packages/subscription-master/node_modules bun.lockb packages/bird-tracker/bun.lockb packages/subscription-master/bun.lockb",
+    "depcruise:svg": "mkdir -p depcruise && for pkg in packages/*/; do name=$(basename \"$pkg\"); (cd \"$pkg\" && npx depcruise src --include-only \"^src\" --output-type dot | dot -T svg > \"../../depcruise/$name.svg\"); done && echo 'Reports saved to depcruise/'",
+    "depcruise:report": "bash -c 'cd \"$1\" && bunx depcruise src --config .dependency-cruiser.cjs' --"
+  },
+  "dependencies": {
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "eslint": "^9.39.2",
+    "eslint-plugin-import": "^2.32.0",
+    "globals": "^17.3.0",
+    "jiti": "^2.6.1",
+    "typescript-eslint": "^8.54.0"
   }
 }

@@ -1,0 +1,13 @@
+{
+  "name": "@repo/bird-tracker",
+  "version": "1.0.0",
+  "main": "src/main.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun --watch src/main.ts",
+    "start": "bun src/main.ts"
+  },
+  "devDependencies": {
+    "dependency-cruiser": "^17.3.7"
+  }
+}
