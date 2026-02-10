@@ -1,1 +1,5 @@
+Use the following prompt to convert a feture spec into a technical implementation plan
+
+```
 Generate a feature-plan.md for feature-spec.md. The plan must include a section on 'Architectural Friction': identify which ESLint rules or Dependency-Cruiser checks will protect this slice. Provide a step-by-step instruction set for a junior developer that includes folder structures, naming conventions for the Public API, and how to implement the logic using a CommandRunner utility
+```

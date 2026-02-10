@@ -1,3 +1,6 @@
+Use the following prompts to convert a rough feature idea into a functional specification
+
+
 Prompt 1:
 
 

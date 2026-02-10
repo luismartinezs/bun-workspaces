@@ -6,11 +6,11 @@
 
 ## Installation
 
-Each package needs its own installation:
+Each package / app needs its own installation:
 
 ```bash
 cd packages/your-package
-npm install --save-dev dependency-cruiser
+bun add -D dependency-cruiser
 ```
 
 ## Initialize Config
@@ -18,7 +18,7 @@ npm install --save-dev dependency-cruiser
 Run the interactive setup:
 
 ```bash
-npx depcruise --init
+bunx depcruise --init
 ```
 
 Answer the prompts:
@@ -33,6 +33,8 @@ This creates `.dependency-cruiser.cjs` with sensible defaults.
 ## Custom Rules for Vertical Slice Architecture
 
 Add these rules to the `forbidden` array in `.dependency-cruiser.cjs`:
+
+Note: These rules are examples and may need to be adjusted based on your specific project structure.
 
 ```javascript
 // Slices must remain isolated
@@ -83,7 +85,7 @@ Add these rules to the `forbidden` array in `.dependency-cruiser.cjs`:
 
 ```bash
 cd packages/your-package
-npx depcruise src
+bunx depcruise src
 ```
 
 ### Generate SVG Graph
@@ -95,7 +97,7 @@ Requires [Graphviz](https://graphviz.org/):
 sudo apt install graphviz
 
 # Generate graph
-npx depcruise src --include-only "^src" --output-type dot | dot -T svg > deps.svg
+bunx depcruise src --include-only "^src" --output-type dot | dot -T svg > deps.svg
 ```
 
 ### Monorepo Scripts
@@ -115,5 +117,5 @@ Output goes to `depcruise/<package-name>.svg`.
 |-------|----------|
 | `depcruise` resolves to wrong package | Install `dependency-cruiser` locally in the package |
 | Empty graph (8x8 SVG) | Run from package dir, use `--include-only "^src"` |
-| `Can't open config file` | Run `npx depcruise --init` or use `--no-config` |
+| `Can't open config file` | Run `bunx depcruise --init` or use `--no-config` |
 | `dot: command not found` | Install Graphviz: `sudo apt install graphviz` |
