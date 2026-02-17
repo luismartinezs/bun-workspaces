@@ -5,7 +5,8 @@
   "type": "module",
   "workspaces": [
     "packages/bird-tracker",
-    "packages/subscription-master"
+    "packages/subscription-master",
+    "packages/vue-vsa-demo"
   ],
   "scripts": {
     "clean": "rm -rf node_modules packages/bird-tracker/node_modules packages/subscription-master/node_modules bun.lockb packages/bird-tracker/bun.lockb packages/subscription-master/bun.lockb",
